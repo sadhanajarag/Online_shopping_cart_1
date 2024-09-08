@@ -1,0 +1,73 @@
+Start Program
+
+Define ItemToPurchase Class:
+    Attributes:
+        - name (string)
+        - description (string)
+        - price (float)
+        - quantity (int)
+    Methods:
+        - Initialize item attributes
+        - Get item details
+
+Define ShoppingCart Class:
+    Attributes:
+        - customer_name (string)
+        - current_date (string)
+        - cart_items (list of ItemToPurchase)
+    Methods:
+        - Initialize shopping cart with customer_name and current_date
+        - Add item to cart_items
+        - Remove item from cart_items by item name
+        - Modify item in cart_items
+        - Print descriptions of all items in cart_items
+        - Calculate and return total number of items in cart_items
+        - Print total cost and details of all items in cart_items
+
+Define print_menu Function:
+    Display menu options:
+        - Add item to cart
+        - Remove item from cart
+        - Change item quantity
+        - Output item descriptions
+        - Output shopping cart details
+        - Quit the application
+
+    Loop:
+        - Get user choice
+        - If choice is 'a' (Add):
+            - Prompt user for item details (name, description, price, quantity)
+            - Create ItemToPurchase object
+            - Add item to ShoppingCart
+        - If choice is 'r' (Remove):
+            - Prompt user for item name to remove
+            - Remove item from ShoppingCart
+        - If choice is 'c' (Change):
+            - Prompt user for item details to modify (name, new description, new price, new quantity)
+            - Modify item in ShoppingCart
+        - If choice is 'i' (Descriptions):
+            - Print item descriptions from ShoppingCart
+        - If choice is 'o' (Output):
+            - Print total cost and details from ShoppingCart
+        - If choice is 'q' (Quit):
+            - Exit loop
+        - Otherwise:
+            - Print "Invalid choice" message
+
+Define get_valid_date Function:
+    Loop:
+        - Prompt user to enter current date
+        - Try to parse the date in 'Month Day, Year' format
+        - If successful, return parsed date
+        - If parsing fails, print error message and prompt again
+
+Define main Function:
+    - Get customer name from user
+    - Get valid current date using get_valid_date
+    - Create ShoppingCart object with customer name and formatted date
+    - Call print_menu with the ShoppingCart object
+
+If script is executed:
+    - Call main Function
+
+End Program
